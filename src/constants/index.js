@@ -43,10 +43,7 @@ import {
   ];
   
   const services = [
-    {
-      title: "Ms Office",
-      icon: web,
-    },
+   
     {
       title: "Editing",
       icon: mobile,
