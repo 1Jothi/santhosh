@@ -1,4 +1,9 @@
 import axios from 'axios';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+
+
 import {
     mobile,
     backend,
@@ -24,6 +29,7 @@ import {
     jobit,
     tripguide,
     threejs,
+    BM,
   } 
   from "../assets";
   
@@ -43,87 +49,106 @@ import {
   ];
   
   const services = [
-   
-    {
-      title: "Editing",
-      icon: mobile,
-    },
-    {
-      title: "Influencer",
-      icon: mobile,
-    },
-    {
-      title: "Data Analyst",
-      icon: backend,
-    },
-    {
-      title: "Quality Assurance",
-      icon: creator,
-    },
+    // { title: "Editing", icon: mobile },
+    // { title: "Influencer Marketing", icon: mobile },
+    // { title: "Food Blogger Promotions", icon: backend },
+    // { title: "BPO - Data Entry", icon: backend },
+    // { title: "Telecalling", icon: backend },
+    // { title: "Quality Assurance", icon: creator },
+    // { title: "SEO & SMO", icon: creator },
+    // { title: "Web Development", icon: web },
+    // { title: "Govt Project Execution", icon: backend },
   ];
   
+  
   const technologies = [
-    {
-      name: "HTML 5",
-      icon: html,
-    },
-    {
-      name: "CSS 3",
-      icon: css,
-    },
-    {
-      name: "JavaScript",
-      icon: javascript,
-    },
-    {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
-      name: "React JS",
-      icon: reactjs,
-    },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
-    },
-    {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
-      name: "git",
-      icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
+    // {
+    //   name: "HTML 5",
+    //   icon: html,
+    // },
+    // {
+    //   name: "CSS 3",
+    //   icon: css,
+    // },
+    // {
+    //   name: "JavaScript",
+    //   icon: javascript,
+    // },
+    // {
+    //   name: "TypeScript",
+    //   icon: typescript,
+    // },
+    // {
+    //   name: "React JS",
+    //   icon: reactjs,
+    // },
+    // {
+    //   name: "Redux Toolkit",
+    //   icon: redux,
+    // },
+    // {
+    //   name: "Tailwind CSS",
+    //   icon: tailwind,
+    // },
+    // {
+    //   name: "Node JS",
+    //   icon: nodejs,
+    // },
+    // {
+    //   name: "MongoDB",
+    //   icon: mongodb,
+    // },
+    // {
+    //   name: "Three JS",
+    //   icon: threejs,
+    // },
+    // {
+    //   name: "git",
+    //   icon: git,
+    // },
+    // {
+    //   name: "figma",
+    //   icon: figma,
+    // },
+    // {
+    //   name: "docker",
+    //   icon: docker,
+    // },
   ];
   
   const experiences = [
     {
-      "title": "DIGITAL MARKETING INTERN",
+      "title": "DIGITAL MARKETING ",
+      "company_name": "Drawvax Infotech & Digital Marketing",
+      "icon": "mobile",
+      "iconBg": "#",
+      "date": "2023 - 2025",
+      "points": [
+        "Assisted in the development of digital marketing campaigns for clients, including email, SEO, SEM, and social media.",
+      "Researched potential customers to identify target audiences through surveys and focus groups.",
+      "Conducted keyword research and analysis to optimize search engine optimization efforts.",
+      "Optimized website content using best practices for SEO."
+    ],
+    },
+    {
+      "title": "JUNIOR TECH LEAD",
+      "company_name": "Bliss Consultancy Services",
+      "icon": "BM",
+      "iconBg": "BM",
+      "date": "2022 - 2024",
+      "points": [
+        "Currently employed at Bliss Consultancy Services, a BPO company, as a Junior Tech Lead in the technology department.",
+        "Lead technical projects within the company, ensuring smooth project execution.",
+        "Managed workflows and provided technical leadership, guiding the team for optimal project delivery."
+      ],
+    },
+    
+    {
+    "title": "DIGITAL MARKETING ",
     "company_name": "BLUE-MINE TECHNOLOGY",
-    "icon": "",
-    "iconBg": "#",
-    "date": "2022 - 2023",
+    "icon": "BM",
+    "iconBg": "BM",
+    "date": "2022 - 2024",
     "points": [
       "Assisted in developing and optimizing digital marketing campaigns, including email, SEO, SEM, and social media.",
       "Conducted in-depth keyword research and analysis to improve search engine rankings.",
@@ -131,28 +156,16 @@ import {
     ],
     },
     {
-      "title": "BLISS CONSULTANCY SERVICES",
-    "company_name": "CENTRAL GOVERNMENT PROJECT",
-    "icon": "",
-    "iconBg": "#",
-    "date": "2022 - 2023",
-    "points": [
-      "Worked as a Junior Tech Lead in the technology department at Bliss Consultancy Services, a BPO company.",
-      "Led multiple technical projects, ensuring smooth execution and compliance with industry standards.",
-      "Managed a team, optimizing workflows and overseeing project implementations."
-    ],
-    },
-    {
-      "title": "AYUSHMAN BHARAT YOJANA PROJECT",
-    "company_name": "CENTRAL GOVERNMENT PROJECT",
-    "icon": "",
-    "iconBg": "#",
-    "date": "2021",
-    "points": [
-      "Successfully completed the Ayushman Bharat Yojana project for the central government.",
-      "Managed a team of 7 employees to ensure smooth execution and project delivery.",
-      "Covered 27 town panchayats within 7 months, achieving project objectives efficiently."
-    ],
+      "title": "CENTRAL GOVERNMENT PROJECT - AYUSHMAN BHARAT YOJANA",
+      "company_name": "Central Government Project",
+      "icon": "",
+      "iconBg": "#",
+      "date": "2022-2021",
+      "points": [
+        "Successfully completed the Ayushman Bharat Yojana project for the central government.",
+        "Managed a team of 7 employees to ensure smooth execution and timely project delivery.",
+        "Covered 27 town panchayats within 7 months, achieving project goals efficiently."
+      ],
     },
     
   ];
@@ -184,7 +197,7 @@ import {
   const projects = [
     {
       name: "DIGITAL MARKETING",
-      description: "Implemented digital marketing strategies including SEO, SEM, and social media campaigns to enhance online visibility and customer engagement. Conducted in-depth keyword research and optimized website content to improve search engine rankings. Managed social media platforms to increase brand awareness and audience interaction.",
+      description: "Implemented digital marketing strategies including SEO, SEM, and social media campaigns to enhance online visibility and customer engagement. Conducted in-depth keyword research and optimized website content to improve search engine rankings.",
        tags: [
         {
           name: "SEO",
@@ -204,47 +217,53 @@ import {
       demo_link: "" ,
     },
     {
-      name: "BLISS CONSULTANCY SERVICES",
-      description: "Led technical projects as a Junior Tech Lead, ensuring smooth execution and compliance with industry standards in a BPO environment.",
+      name: "INFLUENCER MARKETING",
+      description: "Managed influencer marketing campaigns, collaborating with influencers to enhance brand visibility and engagement. Worked with multiple influencers in the Tamil entertainment industry.",
       tags: [
         {
-          name: "Project Management",
+          name: "Influencer Collaboration",
           color: "blue-text-gradient"
         },
         {
-          name: "Team Leadership",
+          name: "Brand Visibility",
           color: "green-text-gradient"
         },
         {
-          name: "Technical Solutions",
+          name: "Content Promotion",
           color: "pink-text-gradient"
         },
       ],
       image: jobit,
       source_code_link: "",
       demo_link: "" ,
+      influencers: [
+        "Mermer",
+        "Edi Menal Kadhal", // Corrected spelling from "Edl Menal Kadhal"
+        "Vathiyar Kuppam", // Corrected spelling from "Vathiyar Kuppa"
+      ],
     },
     {
-      name: "AYUSHMAN BHARAT YOJANA PROJECT",
-      description: "Successfully managed and implemented a central government project, overseeing operations across 27 town panchayats and leading a team of 7 professionals.",
+      name: "BRAND PROMOTION",
+      description: "Executed various brand promotion campaigns, enhancing product visibility and boosting engagement across multiple channels. Focused on targeted marketing strategies.",
       tags: [
         {
-          name: "Government Project",
+          name: "Brand Awareness",
           color: "blue-text-gradient"
         },
         {
-          name: "Team Coordination",
+          name: "Targeted Marketing",
           color: "green-text-gradient"
         },
         {
-          name: "Process Optimization",
+          name: "Engagement Boost",
           color: "pink-text-gradient"
         },
       ],
       image: tripguide,
-      source_code_link: "https://github.com/",
-      demo_link: "http://www.demo.com" ,
+      // source_code_link: "https://github.com/",
+      // demo_link: "http://www.demo.com" ,
     },
+    
   ];
   
   export { services, technologies, experiences, testimonials, projects };

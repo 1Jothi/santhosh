@@ -18,23 +18,27 @@ const Hero = () => {
 
           {/* Text Content */}
           <div className="sm:mt-10 mt-3">
-            <h1 className={`${styles.heroHeadText} text-white`}>
-              Hi, I'm <span className="">MURUGU SANTHOSH</span>
-            </h1>
-            <p className={`${styles.heroSubText} sm:mt-3 mt-2 text-white-100`}>
-              Versatile Digital Marketer & BPO Professional  
-              <br className="sm:block hidden" />
-              with a track record of executing government projects.  
-              <br className="sm:block hidden" />
-              Experienced in SEO, content strategy, and social media marketing.  
-              <br className="sm:block hidden" />
-              Passionate about driving digital transformation through innovative solutions.
-            </p>
+          <h1 className={`${styles.heroHeadText} text-white`}>
+  Hi, I'm <span className="text-yellow-500">MURUGU SANTHOSH</span>
+</h1>
+
+<p className={`${styles.heroSubText} sm:mt-3 mt-2 text-white-100`}>
+  Versatile Digital Marketer & BPO Professional  
+  <br className="sm:block hidden" />
+  with a proven track record in government project execution and brand promotion.  
+  <br className="sm:block hidden" />
+  Experienced in SEO, content strategy, social media marketing, and website QA.  
+  <br className="sm:block hidden" />
+  Collaborated with 800+ influencers, specializing in food vlogging and creator campaigns.  
+  <br className="sm:block hidden" />
+  Currently working at Drawvex, delivering impactful digital solutions for clients across industries.
+</p>
+
           </div>
         </div>
 
         {/* Computers Canvas - Visible only on Desktop */}
-        <div className="hidden sm:block w-full sm:w-[60%] mt-[-130px]">
+        <div className="hidden sm:block w-full sm:w-[65%] mt-[-130px]">
           <ComputersCanvas />
         </div>
 

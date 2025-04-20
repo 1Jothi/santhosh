@@ -19,9 +19,11 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={scene}
-        scale={isMobile ? 0.7 : 0.75}
+        scale={isMobile ? [0.3, 0.8, 0] : [0.5, 0.75, 0.50]} 
+        // ✅ You can adjust the scale here to make the model bigger/smaller
+        // scale={isMobile ? 0.8 : 0.6}
         position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
+        rotation={[0, 0.5, 0]}
       />
     </mesh>
   );
@@ -43,11 +45,18 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
-      style={{ width: "100%", height: "100vh" }} // Keeping your styles
+      style={{ width: "100%", height: "100vh" }}
     >
-      <Suspense fallback={null}> {/* No extra loader, keeping it immediate */}
+      <Suspense fallback={null}>
         <Computers isMobile={isMobile} />
-        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+        {/* ✅ Auto-rotation enabled below */}
+        <OrbitControls
+          enableZoom={false}
+          autoRotate
+          autoRotateSpeed={2}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
       </Suspense>
       <Preload all />
     </Canvas>

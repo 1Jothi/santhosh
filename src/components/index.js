@@ -23,5 +23,6 @@ export {
   BallCanvas, 
   ComputersCanvas, 
   StarsCanvas,
-  MyButton
+  MyButton,
+  
 }

@@ -6,6 +6,8 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import ServiceCarousel from "./ServiceCarousel";
+
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -44,20 +46,24 @@ const About = () => {
       </motion.div>
 
       <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-       completing my UG degree to gaining years of experience in BPO(Voice & Non voice)process
-Successfully completed the Ayushman Bharat Yojana project for the central government.and digital
-marketing, I've honed my skills in SMO, SEO, and web design. Thrilled to utilize my expertise in lead
-generation and qualification. Let's make a difference together! DigitalMarketingSkills LeadQualification.
-      </motion.p>
+  variants={fadeIn("", "", 0.1, 1)}
+  className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+>
+  With hands-on experience in BPO (Voice & Non-Voice) operations and successful execution of central government projects like Ayushman Bharat Yojana, I now contribute to Drawvax Infotech & Digital Marketing. We specialize in SEO, SMO, influencer marketing, brand promotions, web design, and lead generation. Let’s elevate your digital presence together.  
+  <br />
+  🌐 Visit us: <a href="https://your-company-website.com" className="text-blue-400 underline">Drawvax Infotech</a>
+</motion.p>
+
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
+      <section className="mt-10">
+  <ServiceCarousel />
+</section>
+
     </>
   );
 };
